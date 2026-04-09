@@ -18,17 +18,17 @@ Quindi, quando modifichiamo il nome di secondBurger, stiamo modificando anche il
 
 
 // 🏆 Code Question 2
-const hamburger = { 
-    name: "Cheese Burger", 
-    weight: 250,
-    ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
-};
+// const hamburger = { 
+//     name: "Cheese Burger", 
+//     weight: 250,
+//     ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
+// };
 
-const secondBurger = {...hamburger};
-secondBurger.ingredients[0] = "Salad";
+// const secondBurger = {...hamburger};
+// secondBurger.ingredients[0] = "Salad";
 
-console.log(hamburger.ingredients[0]); // Salad
-console.log(secondBurger.ingredients[0]); // Salad
+// console.log(hamburger.ingredients[0]); // Salad
+// console.log(secondBurger.ingredients[0]); // Salad
 
 //Domande:
 // P.S.: Ricordati che gli Array, come gli oggetti, sono dei Reference Type (Tipi di Riferimento)!
@@ -42,25 +42,26 @@ console.log(secondBurger.ingredients[0]); // Salad
 
 
 // 🏆 Code Question 3
-// const hamburger = { 
-//     name: "Cheese Burger", 
-//     weight: 250,
-//     maker: {
-//         name: "Anonymous Chef",
-//         restaurant: {
-//             name: "Hyur's Burgers",
-//             address: "Main Street, 123",
-//             isOpen: true,
-//         },
-//         age: 29
-//     }
-// };
-// ​
-// const secondBurger = structuredClone(hamburger);
-// const thirdBurger = structuredClone(hamburger);
+const hamburger = { 
+    name: "Cheese Burger", 
+    weight: 250,
+    maker: {
+        name: "Anonymous Chef",
+        restaurant: {
+            name: "Hyur's Burgers",
+            address: "Main Street, 123",
+            isOpen: true,
+        },
+        age: 29
+    }
+};
+
+const secondBurger = structuredClone(hamburger);
+const thirdBurger = structuredClone(hamburger);
 
 //Domande:
-// Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+// Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 
+// Ci sono 9 oggetti in memoria, ovvero: hamburger, secondBurger, thirdBurger, maker (3 volte), restaurant (3 volte).
 
 
 

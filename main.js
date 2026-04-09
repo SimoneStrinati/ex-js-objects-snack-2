@@ -42,22 +42,22 @@ Quindi, quando modifichiamo il nome di secondBurger, stiamo modificando anche il
 
 
 // 🏆 Code Question 3
-const hamburger = { 
-    name: "Cheese Burger", 
-    weight: 250,
-    maker: {
-        name: "Anonymous Chef",
-        restaurant: {
-            name: "Hyur's Burgers",
-            address: "Main Street, 123",
-            isOpen: true,
-        },
-        age: 29
-    }
-};
+// const hamburger = { 
+//     name: "Cheese Burger", 
+//     weight: 250,
+//     maker: {
+//         name: "Anonymous Chef",
+//         restaurant: {
+//             name: "Hyur's Burgers",
+//             address: "Main Street, 123",
+//             isOpen: true,
+//         },
+//         age: 29
+//     }
+// };
 
-const secondBurger = structuredClone(hamburger);
-const thirdBurger = structuredClone(hamburger);
+// const secondBurger = structuredClone(hamburger);
+// const thirdBurger = structuredClone(hamburger);
 
 //Domande:
 // Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 
@@ -66,27 +66,37 @@ const thirdBurger = structuredClone(hamburger);
 
 
 // 🏆 Code Question 4
-// const chef = {
-//     name: "Chef Hyur",
-//     age: 29,
-//     makeBurger: (num = 1) => {
-//         console.log(`Ecco ${num} hamburger per te!`);
-//     },
-// }
-// ​
-// const restaurant = {
-//     name: "Hyur's Burgers",
-//     address: {
-//         street: 'Main Street',
-//         number: 123,
-//     },
-//     openingDate: new Date(2025, 3, 11),
-//     isOpen: false,
-// };
+const chef = {
+    name: "Chef Hyur",
+    age: 29,
+    makeBurger: (num = 1) => {
+        console.log(`Ecco ${num} hamburger per te!`);
+    },
+}
+
+const secondChef = {...chef};
+console.log(secondChef);
+
+const restaurant = {
+    name: "Hyur's Burgers",
+    address: {
+        street: 'Main Street',
+        number: 123,
+    },
+    openingDate: new Date(2025, 3, 11),
+    isOpen: false,
+};
+
+const secondRestaurant = structuredClone(restaurant);
+console.log(secondRestaurant);
 
 //Domande:
-// Qual è il metodo migliore per clonare l’oggetto chef, e perché?
-// Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+// 1. Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+// La soluzione migliore è usare lo spread operator, perché ci permette di copiare le funzioni all'interno degli oggetti. In questo caso, la funziona makeBurger.
+ 
+// 2. Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+/*La souzione migliore è lo structureClone, perché permette di copiare gli oggetti annidati, come address e soprattutto openingDate che è un oggetto di tipo Date.
+In questo modo l'oggetto Date viene copiato correttamente, con tutte le sue funzionalità.*/
 
 
 

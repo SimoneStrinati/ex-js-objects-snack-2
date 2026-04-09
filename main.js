@@ -1,11 +1,11 @@
 // 🏆 Code Question 1
-const hamburger = { name: "Cheese Burger", weight: 250 };
-const secondBurger = hamburger;
-secondBurger.name = 'Double Cheese Burger';
-secondBurger.weight = 500;
+// const hamburger = { name: "Cheese Burger", weight: 250 };
+// const secondBurger = hamburger;
+// secondBurger.name = 'Double Cheese Burger';
+// secondBurger.weight = 500;
 
-console.log(hamburger.name); // double cheese burger
-console.log(secondBurger.name ); // double cheese burger
+// console.log(hamburger.name); // double cheese burger
+// console.log(secondBurger.name ); // double cheese burger
 
 //Domande:
 // 1. Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? 
@@ -18,22 +18,26 @@ Quindi, quando modifichiamo il nome di secondBurger, stiamo modificando anche il
 
 
 // 🏆 Code Question 2
-// const hamburger = { 
-//     name: "Cheese Burger", 
-//     weight: 250,
-//     ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
-// };
-// ​
-// const secondBurger = {...hamburger};
-// secondBurger.ingredients[0] = "Salad";
-// ​
-// console.log(hamburger.ingredients[0]); // ?
-// console.log(secondBurger.ingredients[0]); // ?
+const hamburger = { 
+    name: "Cheese Burger", 
+    weight: 250,
+    ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
+};
+
+const secondBurger = {...hamburger};
+secondBurger.ingredients[0] = "Salad";
+
+console.log(hamburger.ingredients[0]); // Salad
+console.log(secondBurger.ingredients[0]); // Salad
 
 //Domande:
 // P.S.: Ricordati che gli Array, come gli oggetti, sono dei Reference Type (Tipi di Riferimento)!
-// Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
-// Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+
+// 1. Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
+// Viene stampato "Salad" per tutt'e due, perché lo spread operator non copia gli oggetti annidati, come l'array di questo caso.//
+
+// 2. Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 
+// 2 (hamburger e secondBurger) ma entrambi condividono lo stesso array ingredients, perciò sono 3 oggetti in memoria: hamburger, secondBurger e l'array ingredients.
 
 
 

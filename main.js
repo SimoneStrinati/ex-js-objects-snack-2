@@ -1,15 +1,19 @@
 // 🏆 Code Question 1
-// const hamburger = { name: "Cheese Burger", weight: 250 };
-// const secondBurger = hamburger;
-// secondBurger.name = 'Double Cheese Burger';
-// secondBurger.weight = 500;
+const hamburger = { name: "Cheese Burger", weight: 250 };
+const secondBurger = hamburger;
+secondBurger.name = 'Double Cheese Burger';
+secondBurger.weight = 500;
 
-// console.log(hamburger.name); // ?
-// console.log(secondBurger.name ); // ?
+console.log(hamburger.name); // double cheese burger
+console.log(secondBurger.name ); // double cheese burger
 
 //Domande:
-// Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? 
-// Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 
+// 1. Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? 
+
+/* Viene stampato "double cheese burger" per tutt'e due, perché entrambi i nomi puntano allo stesso oggetto in memoria. 
+Quindi, quando modifichiamo il nome di secondBurger, stiamo modificando anche il nome di hamburger, poiché sono lo stesso oggetto.*/
+
+// 2. Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 1
 
 
 
